@@ -1,0 +1,25 @@
+To build ONLY with MinGW gfortran, no ifort, no ifx, etc.
+This distribution does not work with Abaqus. 
+
+gfortran main.f90 -L. -lDDM6-gfortran-v1.0.0 -llapack -lblas -o ddm6.exe
+
+Folder content:
+DDM6/
+    examples
+    lib
+        DDM6-gfortran-v1.0.0.a
+        liblapack.a
+        libblas.a
+    src
+        main.f90
+        FILE5.inp
+        plot_2020.py
+        plot_2022.py
+        supporting files
+    build_instructions.txt
+    citation.txt
+    DDMv61userManualShort.pdf
+    license.txt
+    notice.txt
+    readme.md
+

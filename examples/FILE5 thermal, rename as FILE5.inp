@@ -1,0 +1,25 @@
+4           NL, Fig.4-6, P75-1962, Table 4.1, GIIc=GIc=Constant
+0.127       monoply thickness
+0,45,90,-45 LSS
+1,1,1,1     plies per lamina
+84.4810E-3  0.0 0.0     -15 -156.0      GIc(A,B,C,TGImax,TGImin) Table 4.3 const.values
+84.4810E-3  0.0 0.0     -15 -156.0      GIIc(A,B,C,TGIImax,TGIImin)
+177.0   121   -156   121  -156          SFT,TEmax,TEmin,TTmax,TTmin 
+0.204   0.204      1.    0.      0.     betaI<0, betaII<0, Ncycles, aI, aII 
+912.87  F1t
+ 441.2  F1c
+ 57.23  F2c
+   8.9  mWeibull
+271270.586  -8.10997  1.18938E-02	    E1          Table 4.3 quadratic
+6554.2638   -11.6689  4.9329E-04        E2          "
+3998.02127	-8.84364  6.1187E-03	    G12         "		
+0.3147	-6.9707E-05  -4.0521E-07	    v23         "			
+0.5557	-1.0089E-04  -1.1402E-06        v23         "			
+-0.9766711 -9.0549E-05   -7.6732E-06    2.3038E-08  tan(CTE1) cubic
+38.4684     8.9456E-02   -3.6454E-04    0.0         "
+ 0.050  0.0     0.0      -160.   0      !position 5 selects 0:thermal, 1:strain, 2:stress
+                                        !positions 1-3: strains or stresses x, y, z
+                                        !position 4: Tmin
+Notes:
+If Tmin=SFT all properties are constant an equal to the first term
+See Ch.9 & Ch.11 in ISBN 978-0-367-62145-2
