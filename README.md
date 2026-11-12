@@ -2,6 +2,8 @@
 
 Discrete Damage Mechanics (DDM6) software distribution repository. This package provides active source code, build scripts, libraries, and examples for damage prediction and material property identification for laminated composites.
 
+## Please read the CHANGELOG
+
 ## Repository Structure
 
 - **`src/`**: Core Fortran source files for the active DDM6 implementation.
@@ -21,4 +23,4 @@ Redistributions of this software, in source or binary form, must retain the abov
 
 Public, academic, or scientific use of this software should credit the original author:
 * **Ever Barbero** 
-* ORCID [0000-0001-9121-6277](https://github.com/everbarbero)
+* ORCID [0000-0001-9121-6277](https://github.com/everbarbero - https://barbero.cadec-online.com/)

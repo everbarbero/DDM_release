@@ -98,6 +98,7 @@ program main
     ! write(*,'(" targetS =",G12.4," targetTemp=",G12.4,"SFT =",G12.4,"Ncycles=",I10)') targetS(1), targetTemp, TempRange(1), int(ThermFatigG(3))
     if (targetTemp > SFT) stop "*** targetTemp must be less than or equal to SFT ***"
     if (all(targetS(1:3) == 0.0d0) .and. analysisType /= 0 ) stop "* non-zero stress or strain must be present unless KEY = 0"
+    if (analysisType /= 0) targetTemp = SFT ! so that DeltaT = 0, no thermal effects    changelog:11/7/2026  
     close(5)
     open(7,FILE='FILE7.out',FORM='FORMATTED',ACTION='WRITE',STATUS='REPLACE',iostat=ios)
     if (ios /= 0) stop '*** ERROR OPENING the OUTPUT FILE ***'
@@ -142,8 +143,8 @@ program main
         ! stress-driven fatigue analysis w/targets: sigx, sigy, sigxy, Tmin, 2
         if ((ThermFatigG(1)<=0.d0 .or. ThermFatigG(2)<=0.d0) .and. ThermFatigG(3)>1.d0) stop "*** betaI and betaII must be > 1.0 for stress-driven fatigue ***"
         if ((ThermFatigG(4)<1.d0 .or. ThermFatigG(5)<1.d0) .and. ThermFatigG(3)>1.d0) stop "*** aI and aII must be > 1.0 for stress-driven fatigue ***"
-        write(*,'(12A12)') 'Stress      ', 'Strain      ', 'lambda i  '
-        write(7,'(12A12)') 'Stress      ', 'Strain      ', 'lambda i  '
+        write(*,'(12A12)') 'Stress_idx  ', 'Strain_x    ', 'lambda i  '
+        write(7,'(12A12)') 'Stress_idx  ', 'Strain_x    ', 'lambda i  '
         STRAN = 0.0D0
         DSTRAN = 0.D0 
         TEMP = targetTemp       !strain/stress analyses happen at Temp=targetTemp=constant
