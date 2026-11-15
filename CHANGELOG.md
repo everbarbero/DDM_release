@@ -5,6 +5,7 @@
 ### Added
 - CHANGELOG.md
 - if (analysisType /= 0) targetTemp = SFT ! so that DeltaT=0, no thermal effects, main.f90 line 101. See user's manual. 
+- .mod files to /lib
 
 ### Changed
 - Update User's manual
