@@ -12,6 +12,7 @@
 - Improve error msg on file handling
 - update main.f90
 - update DDM6 library
+- update BUILD_INSTRUCTIONS.txt. Users needs to update the build command line with the latest DDM6-gfortran-vx.y.z.a
 
 ### Fixed
 - allocate/deallocate error in utils_ read_xy_file() line 41 affecting KEY=-1
